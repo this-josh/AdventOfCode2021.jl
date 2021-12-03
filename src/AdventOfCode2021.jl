@@ -2,6 +2,7 @@ module AdventOfCode2021
 
 using BenchmarkTools
 using Printf
+using DelimitedFiles
 
 solvedDays = [1, 2]
 
@@ -11,17 +12,11 @@ for day in solvedDays
     include(joinpath(@__DIR__, "day$ds.jl"))
 end
 
-# Read the input from a file:
-function readInput(path::String)
-    s = open(path, "r") do file
-        read(file, String)
-    end
-    return s
+function readInput(pth, args)
+    return DelimitedFiles.readdlm(pth,args)
 end
-function readInput(day::Integer)
-    path = joinpath(@__DIR__, "..", "data", @sprintf("day%02d.txt", day))
-    return readInput(path)
-end
+
+
 export readInput
 
 
