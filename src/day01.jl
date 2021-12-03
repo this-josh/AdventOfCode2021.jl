@@ -16,7 +16,7 @@ function day01(data::String = readInput(joinpath(@__DIR__, "..", "data", "day01.
     windows = zeros(size(data)[1])
     for (idx, window) in enumerate(IterTools.partition(data, 3,1))
         windows[idx]=  sum(window)
-    
+    end
     return part1, windows
 end
 
