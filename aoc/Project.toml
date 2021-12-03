@@ -1,0 +1,3 @@
+[deps]
+AdventOfCode2021 = "2836b301-409c-4acb-ad96-82c338bb79f9"
+DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
