@@ -39,4 +39,5 @@ function day02(data::String = readInput(joinpath(@__DIR__, "..", "data", "day02.
     end
     part2 = depth*horizontal
     return part1,part2
+end
 end # module
