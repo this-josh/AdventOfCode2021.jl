@@ -12,11 +12,18 @@ for day in solvedDays
     include(joinpath(@__DIR__, "day$ds.jl"))
 end
 
-function readInput(pth, args)
-    return DelimitedFiles.readdlm(pth,args)
+function readInput(pth::String, args::Any=nothing)
+    if isnothing(args) 
+        return DelimitedFiles.readdlm(pth)
+    else
+        return DelimitedFiles.readdlm(pth, args)
+    end
 end
 
-
+function readInput(day::Integer, args::Any= nothing)
+    path = joinpath(@__DIR__, "..", "data", @sprintf("day%02d.txt", day))
+    return readInput(path, args)
+end
 export readInput
 
 
