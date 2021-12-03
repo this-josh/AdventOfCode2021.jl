@@ -35,7 +35,7 @@ for d in solvedDays
 
     @eval begin
         input_path = joinpath(@__DIR__, "..", "data", ds)
-        function $dsSymbol(input::String = readInput($d))
+        function $dsSymbol(input::Any = readInput($d))
             return AdventOfCode2021.$modSymbol.$dsSymbol(input)
         end
         export $dsSymbol

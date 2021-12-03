@@ -9,7 +9,7 @@ function num_increasing(arr)
     return count(ii->(ii<0), diff)
 end
 
-function day01(data::String = readInput(joinpath(@__DIR__, "..", "data", "day01.txt")))
+function day01(data::Any = readInput(joinpath(@__DIR__, "..", "data", "day01.txt")))
     # part 1
     part1 = num_increasing(data)
     # part 2
@@ -17,7 +17,9 @@ function day01(data::String = readInput(joinpath(@__DIR__, "..", "data", "day01.
     for (idx, window) in enumerate(IterTools.partition(data, 3,1))
         windows[idx]=  sum(window)
     end
-    return part1, windows
+    part2 = num_increasing(windows)
+
+    return part1, part2
 end
 
 end # module

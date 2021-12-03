@@ -2,7 +2,7 @@ module Day02
 
 using AdventOfCode2021
 
-function day02(data::String = readInput(joinpath(@__DIR__, "..", "data", "day02.txt")))
+function day02(data::Any = readInput(joinpath(@__DIR__, "..", "data", "day02.txt")))
     # part 1
     horizontal = 0
     depth = 0 
