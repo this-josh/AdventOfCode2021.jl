@@ -16,11 +16,7 @@ This Julia package contains my solutions for [Advent of Code 2021](https://adven
 The benchmarks have been measured on this machine:
 ```
 Platform Info:
-  OS: Linux (x86_64-pc-linux-gnu)
-  CPU: Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
-  WORD_SIZE: 64
-  LIBM: libopenlibm
-  LLVM: libLLVM-13.0.0 (ORCJIT, skylake)
+?
 ```
 
 
